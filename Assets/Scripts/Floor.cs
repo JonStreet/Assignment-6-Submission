@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Floor : MonoBehaviour
 {
+
+    public AudioClip Clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class Floor : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        AudioSource.PlayClipAtPoint(Clip, Camera.main.transform.position, 1);
         SceneManager.LoadScene("GameOver");
     }
 }

@@ -8,8 +8,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private float upVelocity = 10f;
     [SerializeField] private float sideVelocity = 3f;
     public AudioClip Clip;
-    float paddleMinX = 3f;
-    float paddleMaxX = 12.3f;
+    float paddleMinX = -4.9f;
+    float paddleMaxX = 4.7f;
     float screenWidthInUnits;
 
     bool isStarted;

@@ -6,8 +6,8 @@ public class Paddle : MonoBehaviour
 {
 
     float screenWidthInUnits;
-    float paddleMinX = 3f;
-    float paddleMaxX = 12.3f;
+    float paddleMinX = -4.9f;
+    float paddleMaxX = 4.7f;
 
     // Start is called before the first frame update
     void Start()

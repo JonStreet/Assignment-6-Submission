@@ -5,10 +5,11 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
 
+    public GameObject blockSparklesVFX;
     
     public AudioClip Clip;
-
-
+    GameObject particleVFX;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +29,8 @@ public class Block : MonoBehaviour
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(Clip, Camera.main.transform.position, 1);
 
+        particleVFX = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
+
+        Destroy(particleVFX, 2.0f);
     }
 }
